@@ -19,6 +19,8 @@
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
     overflow: hidden;
+    display: flex;
+    flex-direction: column;
 }
 
 .solution-card::before {
@@ -73,6 +75,7 @@
 .feature-list {
     list-style: none;
     padding: 0;
+    margin-bottom: 2rem;
 }
 
 .feature-item {
@@ -88,6 +91,21 @@
     margin-right: 0.75rem;
     margin-top: 2px;
     flex-shrink: 0;
+}
+
+.solution-link {
+    margin-top: auto;
+    color: var(--color-primary);
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    transition: all 0.2s;
+}
+
+.solution-link:hover {
+    gap: 0.8rem;
+    text-decoration: underline;
 }
 
 .section-header {

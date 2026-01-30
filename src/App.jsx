@@ -1,28 +1,24 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
-import Solutions from './components/Solutions';
-import ProcessFlow from './components/ProcessFlow';
-import TechSpecs from './components/TechSpecs';
-import UserStories from './components/UserStories';
-import TechBlog from './components/TechBlog';
-import CTA from './components/CTA';
+import HomePage from './pages/HomePage';
+import SolutionPPE from './pages/SolutionPPE';
+import SolutionRetail from './pages/SolutionRetail';
 import Footer from './components/Footer';
 
 function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Hero />
-      <Solutions />
-      <ProcessFlow />
-      <TechSpecs />
-      <UserStories />
-      <TechBlog />
-      <CTA />
-
-      <Footer />
-    </div>
+    <Router>
+      <div className="App">
+        <Navbar />
+        <Routes>
+          <Route path="/" element={<HomePage />} />
+          <Route path="/solutions/ppe" element={<SolutionPPE />} />
+          <Route path="/solutions/retail" element={<SolutionRetail />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

@@ -1,5 +1,6 @@
 import React from 'react';
-import { ShieldCheck, TrendingUp, Sprout, Workflow, CheckCircle } from 'lucide-react';
+import { ShieldCheck, TrendingUp, Sprout, Workflow, CheckCircle, ArrowRight } from 'lucide-react';
+import { Link } from 'react-router-dom';
 import './Solutions.css';
 
 const solutionsData = [
@@ -7,6 +8,7 @@ const solutionsData = [
         icon: <ShieldCheck size={28} />,
         title: "Công Trường Thông Minh",
         subtitle: "Construction Site Safety & Control",
+        link: "/solutions/ppe",
         features: [
             "PPE Gate Control: FaceID + Mũ/Áo bảo hộ",
             "Vehicle AI: Nhận diện biển số & đếm xe",
@@ -18,6 +20,7 @@ const solutionsData = [
         icon: <TrendingUp size={28} />,
         title: "Bán Lẻ Thông Minh",
         subtitle: "Smart Retail & Analytics",
+        link: "/solutions/retail",
         features: [
             "VIP Greeting: Nhận diện khách VIP",
             "Heatmap & Đếm người ra vào",
@@ -29,6 +32,7 @@ const solutionsData = [
         icon: <Sprout size={28} />,
         title: "Nông Nghiệp CNC",
         subtitle: "AgriTech & LoRaWAN",
+        link: "#",
         features: [
             "AI Diagnosis: Chẩn đoán bệnh cây trồng",
             "IoT Control: Điều khiển tưới tiêu từ xa",
@@ -40,6 +44,7 @@ const solutionsData = [
         icon: <Workflow size={28} />,
         title: "Siêu Tự Động Hóa",
         subtitle: "Hyper Automation with n8n",
+        link: "#",
         features: [
             "Orchestration luồng dữ liệu phức tạp",
             "Cảnh báo đa kênh: Telegram, Email, SMS",
@@ -74,6 +79,12 @@ const Solutions = () => {
                                     </li>
                                 ))}
                             </ul>
+
+                            {item.link !== "#" && (
+                                <Link to={item.link} className="solution-link">
+                                    Xem chi tiết <ArrowRight size={16} />
+                                </Link>
+                            )}
                         </div>
                     ))}
                 </div>
