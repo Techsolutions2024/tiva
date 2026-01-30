@@ -1,0 +1,105 @@
+.stories-section {
+    padding: 6rem 1rem;
+    background-color: #0d0d0d;
+}
+
+.stories-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.stories-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+}
+
+.story-card {
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.01) 100%);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    border-radius: 16px;
+    padding: 2rem;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.story-card:hover {
+    border-color: var(--color-primary);
+    transform: translateY(-5px);
+}
+
+.story-client {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.client-logo {
+    width: 50px;
+    height: 50px;
+    background: var(--color-surface);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    color: var(--color-primary);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.client-info h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    margin-bottom: 0.2rem;
+}
+
+.client-industry {
+    color: var(--color-text-muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.story-quote {
+    font-size: 1.1rem;
+    color: #e0e0e0;
+    font-style: italic;
+    line-height: 1.6;
+    margin-bottom: 2rem;
+    position: relative;
+}
+
+.story-quote::before {
+    content: '"';
+    font-size: 4rem;
+    color: rgba(0, 255, 157, 0.1);
+    position: absolute;
+    top: -40px;
+    left: -10px;
+    font-family: serif;
+}
+
+.story-metrics {
+    display: flex;
+    gap: 1.5rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    padding-top: 1.5rem;
+}
+
+.metric-item {
+    flex: 1;
+}
+
+.metric-value {
+    display: block;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--color-primary);
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+}

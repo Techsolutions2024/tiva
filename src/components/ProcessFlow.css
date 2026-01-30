@@ -1,0 +1,133 @@
+.process-section {
+    padding: 6rem 1rem;
+    background-color: var(--color-bg);
+    position: relative;
+    overflow: hidden;
+}
+
+.process-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin: 4rem auto;
+    position: relative;
+    z-index: 2;
+}
+
+.process-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+    flex: 1;
+}
+
+.step-icon-box {
+    width: 80px;
+    height: 80px;
+    background: var(--color-surface);
+    border: 2px solid var(--color-primary);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--color-primary);
+    margin-bottom: 1rem;
+    box-shadow: 0 0 20px rgba(0, 255, 157, 0.2);
+    transition: all 0.3s ease;
+}
+
+.process-step:hover .step-icon-box {
+    transform: scale(1.1);
+    background: var(--color-primary);
+    color: #000;
+}
+
+.step-title {
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+    color: #fff;
+}
+
+.step-desc {
+    font-size: 0.85rem;
+    color: var(--color-text-muted);
+    max-width: 200px;
+}
+
+.process-connector {
+    position: absolute;
+    top: 40px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background: #333;
+    z-index: 1;
+}
+
+.process-connector-fill {
+    height: 100%;
+    background: var(--color-primary);
+    width: 0%;
+    /* Animate this */
+    animation: fillLine 3s infinite linear;
+}
+
+@keyframes fillLine {
+    0% {
+        width: 0%;
+        margin-left: 0;
+    }
+
+    50% {
+        width: 100%;
+        margin-left: 0;
+    }
+
+    100% {
+        width: 0%;
+        margin-left: 100%;
+    }
+}
+
+/* Mobile responsive */
+@media (max-width: 768px) {
+    .process-container {
+        flex-direction: column;
+        gap: 3rem;
+    }
+
+    .process-connector {
+        width: 2px;
+        height: 100%;
+        left: 50%;
+        top: 0;
+        transform: translateX(-50%);
+    }
+
+    .process-connector-fill {
+        width: 100%;
+        height: 0%;
+        animation: fillLineVertical 3s infinite linear;
+    }
+
+    @keyframes fillLineVertical {
+        0% {
+            height: 0%;
+            margin-top: 0;
+        }
+
+        50% {
+            height: 100%;
+            margin-top: 0;
+        }
+
+        100% {
+            height: 0%;
+            margin-top: 100%;
+        }
+    }
+}

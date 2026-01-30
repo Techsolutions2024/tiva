@@ -1,0 +1,153 @@
+.hero-section {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background-color: #000;
+    padding-top: 40px;
+    /* Offset for potential navbar */
+}
+
+.hero-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.hero-bg svg {
+    width: 100%;
+    height: 100%;
+}
+
+.hero-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to bottom, transparent, #000);
+}
+
+.hero-content-wrapper {
+    position: relative;
+    z-index: 10;
+    text-align: center;
+    padding: 0 1rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.hero-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    border: 1px solid #00ff9d;
+    border-radius: 9999px;
+    padding: 0.25rem 1rem;
+    margin-bottom: 1.5rem;
+    background: rgba(0, 255, 157, 0.1);
+    color: #00ff9d;
+    font-size: 0.875rem;
+    font-weight: 600;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+.hero-title {
+    font-size: 3rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+
+.hero-title-sub {
+    color: #fff;
+    font-size: 1.5rem;
+    font-weight: 300;
+    display: block;
+    margin-top: 0.5rem;
+}
+
+.hero-desc {
+    font-size: 1.125rem;
+    color: #a0a0a0;
+    max-width: 48rem;
+    margin: 0 auto 2.5rem;
+    line-height: 1.6;
+}
+
+.hero-desc strong {
+    color: #fff;
+    font-weight: 500;
+}
+
+.hero-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.hero-btn-secondary {
+    padding: 0.75rem 2rem;
+    border-radius: 4px;
+    border: 1px solid #444;
+    color: #ccc;
+    font-weight: 500;
+    background: transparent;
+    transition: all 0.3s;
+}
+
+.hero-btn-secondary:hover {
+    border-color: var(--color-secondary);
+    color: var(--color-secondary);
+}
+
+.floating-icon {
+    position: absolute;
+    opacity: 0.2;
+}
+
+.floating-icon.icon-1 {
+    bottom: 5rem;
+    left: 2.5rem;
+    color: var(--color-secondary);
+}
+
+.floating-icon.icon-2 {
+    top: 10rem;
+    right: 2.5rem;
+    color: var(--color-primary);
+}
+
+@media (min-width: 640px) {
+    .hero-buttons {
+        flex-direction: row;
+    }
+
+    .hero-title {
+        font-size: 4rem;
+    }
+
+    .hero-title-sub {
+        font-size: 2rem;
+    }
+
+    .hero-desc {
+        font-size: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .hero-title {
+        font-size: 5rem;
+    }
+}
