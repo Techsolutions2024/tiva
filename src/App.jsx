@@ -7,6 +7,7 @@ import TechSpecs from './components/TechSpecs';
 import UserStories from './components/UserStories';
 import TechBlog from './components/TechBlog';
 import CTA from './components/CTA';
+import Footer from './components/Footer';
 
 function App() {
   return (
@@ -20,11 +21,7 @@ function App() {
       <TechBlog />
       <CTA />
 
-      <footer style={{ backgroundColor: '#050505', color: '#555', padding: '2rem 0', textAlign: 'center', borderTop: '1px solid #111' }}>
-        <div className="container">
-          <p>© 2024 AIoT Edge Solutions. All Rights Reserved.</p>
-        </div>
-      </footer>
+      <Footer />
     </div>
   );
 }

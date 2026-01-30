@@ -32,7 +32,7 @@ const Navbar = () => {
                     <li><a href="#" className="nav-link">Blog</a></li>
                 </ul>
 
-                <a href="#" className="nav-cta">Liên Hệ Ngay</a>
+                <a href="#contact-info" className="nav-cta">Liên Hệ Ngay</a>
             </div>
         </nav>
     );
